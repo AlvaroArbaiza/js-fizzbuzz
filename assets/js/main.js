@@ -9,19 +9,29 @@ BONUS 2:
     Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz.
 */
 
+let lista = document.querySelector(`#ul_debug`);
+
 // Creiamo un ciclo che stampi i numeri da 1 a 100
 for (let i = 1; i <= 100; i++) {
+
+    lista.innerHTML += `<li> ${i} </li>`
     
     // Creiamo la condizione per stampare FizzBuzz quando il numero è multiplo di 3 e 5
     if (i % 3 === 0 && i % 5 === 0) {
+
+        lista.innerHTML += `<li> FizzBuzz </li>`
         console.log("FizzBuzz");
     
     // Creiamo la condizione per stampare Fizz quando il numero è multiplo di 3
     } else if (i % 3 === 0) { 
+
+        lista.innerHTML += `<li> Fizz </li>`
         console.log("Fizz");        
 
     // Creiamo la condizione per stampare Buzz quando il numero è multiplo di 5
     } else if (i % 5 === 0) {
+
+        lista.innerHTML += `<li> Buzz </li>`
         console.log("Buzz");
 
     // Creiamo la condizione per stampare i numeri che non sono multipli di 3 e di 5
@@ -29,3 +39,5 @@ for (let i = 1; i <= 100; i++) {
         console.log(i);
     }
 }
+
+
